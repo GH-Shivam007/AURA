@@ -134,10 +134,3 @@ Push and open a PR 🚀
 MIT License – see LICENSE
 
 PROJECT AURA – Transforming cybersecurity with real-time visualization & AI insights.
-
-yaml
-Copy code
-
----
-
-Do you want me to also include a **section with screenshot placeholders** (so you can later add dashboard + chatbot UI images)?
