@@ -1,0 +1,246 @@
+/* Threat Network Graph Styles */
+
+/* Animated dashing for suspicious edges */
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 30;
+  }
+}
+
+/* Pulse animation for threat nodes */
+@keyframes threat-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(220, 38, 38, 0.8);
+    transform: scale(1.02);
+  }
+}
+
+/* Glow effect for high-volume edges */
+@keyframes volume-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 4px #f59e0b);
+  }
+  50% {
+    filter: drop-shadow(0 0 8px #fbbf24);
+  }
+}
+
+/* Custom edge label styling */
+.threat-edge-label {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 4px 8px;
+  font-size: 10px;
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Suspicious transaction styles */
+.suspicious-edge {
+  stroke-dasharray: 10, 5;
+  animation: dash 2s linear infinite, threat-glow 2s ease-in-out infinite;
+}
+
+@keyframes threat-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px #ef4444);
+  }
+  50% {
+    filter: drop-shadow(0 0 12px #fca5a5);
+  }
+}
+
+/* High volume transaction styles */
+.volume-edge {
+  animation: volume-glow 3s ease-in-out infinite;
+}
+
+/* Golden glow animation for normal edges */
+@keyframes golden-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 12px #fbbf24) drop-shadow(0 0 24px #f59e0b);
+  }
+  50% {
+    filter: drop-shadow(0 0 18px #fbbf24) drop-shadow(0 0 36px #f59e0b);
+  }
+}
+
+.golden-edge {
+  animation: golden-glow 2s ease-in-out infinite;
+}
+
+/* Enhanced transaction flow animations */
+@keyframes transaction-flow {
+  0% {
+    stroke-dashoffset: 0;
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 40;
+    opacity: 0.6;
+  }
+}
+
+.transaction-flow {
+  stroke-dasharray: 8, 8;
+  animation: transaction-flow 2s linear infinite;
+}
+
+/* Pulsing transaction labels */
+@keyframes label-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 20px rgba(251, 191, 36, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(251, 191, 36, 0.5);
+  }
+}
+
+.transaction-label {
+  animation: label-pulse 3s ease-in-out infinite;
+}
+
+/* Node connection indicators */
+.react-flow__handle {
+  background: transparent;
+  border: 2px solid #10b981;
+  width: 8px;
+  height: 8px;
+}
+
+.react-flow__handle.react-flow__handle-top,
+.react-flow__handle.react-flow__handle-bottom {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.react-flow__handle.react-flow__handle-left,
+.react-flow__handle.react-flow__handle-right {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Compromised account handle styling */
+.compromised-handle {
+  border-color: #dc2626 !important;
+  background: #dc2626 !important;
+  animation: threat-pulse 2s infinite;
+}
+
+/* Enhanced minimap styling */
+.react-flow__minimap {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+/* Controls styling */
+.react-flow__controls {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.react-flow__controls button {
+  background: rgba(16, 185, 129, 0.1);
+  border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+.react-flow__controls button:hover {
+  background: rgba(16, 185, 129, 0.2);
+}
+
+/* Background pattern enhancement */
+.react-flow__background {
+  opacity: 0.3;
+}
+
+/* Edge animation for data flow */
+@keyframes data-flow {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 20;
+  }
+}
+
+.data-flow-edge {
+  stroke-dasharray: 5, 5;
+  animation: data-flow 3s linear infinite;
+}
+
+/* Enhanced pulse glow for transaction lines */
+@keyframes transaction-pulse-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px currentColor) drop-shadow(0 0 12px currentColor);
+    opacity: 0.8;
+  }
+  50% {
+    filter: drop-shadow(0 0 16px currentColor) drop-shadow(0 0 24px currentColor) drop-shadow(0 0 32px currentColor);
+    opacity: 1;
+  }
+}
+
+/* Danger transaction intense glow */
+@keyframes danger-transaction-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px #ef4444) drop-shadow(0 0 16px #dc2626);
+    opacity: 0.9;
+  }
+  50% {
+    filter: drop-shadow(0 0 20px #ef4444) drop-shadow(0 0 32px #dc2626) drop-shadow(0 0 40px #b91c1c);
+    opacity: 1;
+  }
+}
+
+/* High volume transaction pulse */
+@keyframes volume-transaction-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px #f59e0b) drop-shadow(0 0 14px #d97706);
+    opacity: 0.9;
+  }
+  50% {
+    filter: drop-shadow(0 0 18px #f59e0b) drop-shadow(0 0 28px #d97706) drop-shadow(0 0 36px #b45309);
+    opacity: 1;
+  }
+}
+
+/* Normal transaction gentle pulse */
+@keyframes normal-transaction-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px #fbbf24) drop-shadow(0 0 12px #f59e0b);
+    opacity: 0.8;
+  }
+  50% {
+    filter: drop-shadow(0 0 14px #fbbf24) drop-shadow(0 0 20px #f59e0b) drop-shadow(0 0 28px #d97706);
+    opacity: 1;
+  }
+}
+
+/* Apply glow classes */
+.transaction-edge-suspicious {
+  animation: danger-transaction-pulse 1.5s ease-in-out infinite;
+}
+
+.transaction-edge-volume {
+  animation: volume-transaction-pulse 2s ease-in-out infinite;
+}
+
+.transaction-edge-normal {
+  animation: normal-transaction-pulse 2.5s ease-in-out infinite;
+}
