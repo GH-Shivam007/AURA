@@ -388,5 +388,6 @@ For support, questions, or feature requests:
 
 ---
 
-**PROJECT AURA** - Transforming cybersecurity through intelligent visualization and real-time threat intelligence.#   A U R A  
+**PROJECT AURA** - Transforming cybersecurity through intelligent visualization and real-time threat intelligence.#   A U R A 
+ 
  
