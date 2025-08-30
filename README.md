@@ -6,131 +6,111 @@
 ![Three.js](https://img.shields.io/badge/Three.js-0.168.0-000000) 
 ![Gemini](https://img.shields.io/badge/LLM-Gemini-ff9800)
 
-**Project AURA** is a real-time **cyber threat visualization & analysis platform** with an integrated **Gemini-powered chatbot**.
+**Project AURA** is a cutting-edge real-time **cyber threat visualization and analysis platform** enhanced with an integrated **Gemini-powered chatbot assistant**. It combines live threat feeds, 3D visualization, intelligent analytics, and AI-driven assistance for cybersecurity insights.
 
 ---
 
 ## ✨ Features
 
-- 🌍 **3D Globe Visualization**: Interactive display of global threat activity  
-- 🔥 **Real-Time Threat Feed**: Stream of simulated cyber events  
-- 📊 **Threat Analytics**: Severity classification, geo-mapping, trend detection  
-- 🤖 **AI Assistant (Gemini)**: Floating chatbot that answers queries about threats & trends  
+### 🔍 Real-Time Threat Monitoring
+- Continuous live data stream of simulated cyber threats  
+- Automated categorization by type & severity  
+- Integration of multiple intelligence sources  
+
+### 🌍 Advanced Visualization
+- Interactive **3D globe** with animated threat connections  
+- **3D heatmap** for time-based severity trends  
+- Real-time particle & energy effects  
+- Fully responsive design  
+
+### 📊 Intelligence & Analytics
+- Real-time aggregation of threat metrics  
+- Pattern recognition & trend detection  
+- Severity mapping with advanced classification  
+- Region/country-based analysis  
+
+### 🤖 AI Assistant (Gemini)
+- Floating chatbot icon (bottom-right)  
+- Gemini API integration through secure Node.js proxy  
+- Answers queries like *“What are the top threat sources today?”* or *“Summarize severity trends”*  
+- Contextual, concise, and domain-aware responses  
 
 ---
 
 ## 🛠️ Tech Stack
 
-**Frontend**
-- React 18 + Vite + TypeScript
-- Three.js + @react-three/fiber + drei
-- Tailwind CSS + shadcn/ui
-- React Query, Framer Motion
+### Frontend
+- **React 18 + Vite** (TypeScript)  
+- **Three.js + @react-three/fiber + drei** (3D rendering)  
+- **Tailwind CSS + shadcn/ui** (UI/Styling)  
+- **Framer Motion** (animations)  
+- **React Query, Zod** (state & validation)  
 
-**Backend**
-- Node.js + Express
-- Google Gemini API (`@google/generative-ai`)
+### Backend
+- **Node.js + Express**  
+- **Gemini API** (`@google/generative-ai`)  
 
 ---
 
-## 🚀 Quick Start
+## ⚡ Quick Guide
 
-### 1. Clone & Install
-```bash
-git clone <your-repo-url> aura
-cd aura
-npm install
-2. Setup Environment Variables
+1. **Clone repo & install**
+   ```bash
+   git clone <your-repo-url> aura
+   cd aura
+   npm install
+
+
+2. **Set environment variables**
+
 Frontend (.env.local)
-env
-Copy code
 VITE_API_URL=http://localhost:3000
+
+
 Backend (server/.env)
-env
-Copy code
+
 GOOGLE_API_KEY=your_gemini_api_key_here
 PORT=3000
-👉 Get a key at Google AI Studio.
 
-3. Run the Backend (Chat API)
-bash
-Copy code
+3.  **Run backend**
+
 cd server
 npm install
 node index.js
-➡️ API runs at http://localhost:3000
+Backend API available at → http://localhost:3000/chat
 
-4. Run the Frontend
-bash
-Copy code
+**Run frontend**
+
 npm run dev
-➡️ App runs at http://localhost:5173
+Open → http://localhost:5173
 
-🤖 Using the Chatbot
-Click the floating 🤖 bot icon (bottom-right corner).
-
-Ask questions like:
-
-“What are today’s top threat sources?”
-
-“Show me severity trends.”
-
-Gemini responds with insights in real time.
-
-📦 Scripts
-bash
-Copy code
+**Scripts**
 # Frontend
 npm run dev        # Start dev server
-npm run build      # Build for production
+npm run build      # Production build
 npm run preview    # Preview production build
 
 # Backend
-node index.js      # Start chat API
-📊 Architecture
-mermaid
-Copy code
+node index.js      # Run Gemini chat API
+
+
+## 📊 Architecture
+
+```mermaid
 graph TD
   subgraph Frontend
-    A[React Dashboard] --> B[3D Globe]
-    A --> C[Heatmap]
-    A --> D[Threat Stats]
-    A --> E[ChatDock]
+    A[AuraDashboard] --> B[ThreatStats]
+    A --> C[ThreatGlobe]
+    A --> D[LiveTicker]
+    A --> E[ThreatHeatmap]
+    A --> F[ChatDock]
   end
 
   subgraph Backend
-    F[Express API] --> G[Gemini LLM]
+    X[Express API] --> Y[Gemini LLM]
   end
 
-  E --> F
-🔧 Troubleshooting
-"Failed to fetch" error
+  F --> X
 
-Backend not running? Start with node index.js
 
-Check .env.local → VITE_API_URL=http://localhost:3000
 
-Chatbot replies empty
-
-Wrong/missing Gemini API key
-
-Test backend with:
-
-bash
-Copy code
-curl -X POST http://localhost:3000/chat \
-  -H "Content-Type: application/json" \
-  -d '{"messages":[{"role":"user","content":"Hello Gemini"}]}'
-🤝 Contributing
-Fork the repo
-
-Create a feature branch
-
-Commit changes
-
-Push and open a PR 🚀
-
-📄 License
-MIT License – see LICENSE
-
-PROJECT AURA – Transforming cybersecurity with real-time visualization & AI insights.
