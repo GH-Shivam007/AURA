@@ -29,7 +29,7 @@
 - Severity mapping with advanced classification  
 - Region/country-based analysis  
 
-### 🤖 AI Assistant (Gemini)
+### 🤖 AI Assistant (AURA)
 - Floating chatbot icon (bottom-right)  
 - Gemini API integration through secure Node.js proxy  
 - Answers queries like *“What are the top threat sources today?”* or *“Summarize severity trends”*  
